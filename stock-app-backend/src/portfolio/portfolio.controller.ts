@@ -20,7 +20,6 @@ export class PortfolioController {
   @Delete('remove')
   async removeStock(@Body() removeStockDto: RemoveStockDto) {
     try {
-      // We're using RemoveStockDto here - it validates the request body
       const result = await this.portfolioService.removeStock(removeStockDto);
       return { success: true, data: result };
     } catch (error) {

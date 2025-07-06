@@ -12,7 +12,6 @@ export class StockService {
     private readonly httpService: HttpService,
     private readonly configService: ConfigService,
   ) {
-    // This reads the API key from the .env file
     this.apiKey = this.configService.get<string>('FMP_API_KEY') || 'YDsO4BTtznqwWUPMn1Hkma6f5qa3AIFv';
   }
 

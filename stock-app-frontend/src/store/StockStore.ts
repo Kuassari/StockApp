@@ -38,7 +38,7 @@ class StockStore {
   loading = false;
   selectedStock: StockQuote | null = null;
   searchResults: any[] = [];
-  userId = 'user123'; // For demo purposes
+  userId = 'user123'; 
 
   constructor() {
     makeAutoObservable(this);
@@ -49,7 +49,7 @@ class StockStore {
     try {
       const response = await axios.get(`http://localhost:3001/portfolio/${this.userId}`);
       if ((response.data as any).success) {
-        this.portfolio = (response.data as any).data; // Fixed: was response.data
+        this.portfolio = (response.data as any).data; 
       }
     } catch (error) {
       console.error('Failed to load portfolio:', error);

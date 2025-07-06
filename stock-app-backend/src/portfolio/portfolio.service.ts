@@ -11,7 +11,6 @@ export class PortfolioService {
   ) {}
 
   async addStock(addStockDto: AddStockDto): Promise<Portfolio> {
-    // Check if stock already exists in portfolio
     const existingStock = await this.portfolioModel.findOne({
       userId: addStockDto.userId,
       symbol: addStockDto.symbol,
